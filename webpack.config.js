@@ -56,39 +56,9 @@ module.exports = (data) => {
         },
       ],
     },
-    resolve: {
-      extensions: [".js", ".jsx"],
-      alias: {
-        "@assets": path.resolve(__dirname, "./assets"),
-        "@constants": path.resolve(__dirname, "./react/constants"),
-        "@components": path.resolve(__dirname, "./react/components"),
-        "@helpers": path.resolve(__dirname, "./react/helpers"),
-        "@pages": path.resolve(__dirname, "./react/pages"),
-        "@services": path.resolve(__dirname, "./react/services"),
-        "@shared": path.resolve(__dirname, "./react/shared"),
-      },
-    },
     output: {
       path: path.resolve(__dirname, "dist"),
       filename: "[name].js",
     },
   };
 };
-
-/* module.exports = (data) => {
-  return {
-    entry: path.resolve(__dirname, "./src/client/index.js"),
-    plugins: getPlugins(data.ENV),
-    output: {
-      path: path.resolve(__dirname, "./public"),
-      filename: "bundle.js",
-      publicPath: "/public",
-    },
-    devtool: "inline-source-map",
-    devServer: {
-      https: true,
-      port: 3000,
-    },
-  };
-};
- */
